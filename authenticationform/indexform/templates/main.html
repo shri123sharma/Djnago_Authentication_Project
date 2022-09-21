@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+{% block title %}
+{% endblock title %}
+
+
+{% block content %}
+{% for obj in ps %}
+<h1>{{obj.title}}</h1>
+<p1>{{obj.body}}</p1>
+
+<form action="{% url 'like' %}" method="POST">
+    {% csrf_token %}
+    <h1>{{obj.id}}</h1>
+<input type="hidden" name='post_id' value="{{obj.id}}">
+{% if user not in obj.liked.all %}
+<button type="submit"  class="btn btn-success">Like</button>
+{% else %}
+<button type="submit" class="btn btn-danger">Unlike</button>
+{% endif %}
+</form>
+<strong>{{ obj.liked.all.count }}Likes</strong> 
+{% endfor %}
+{% endblock content %}
+</body>
+</html>

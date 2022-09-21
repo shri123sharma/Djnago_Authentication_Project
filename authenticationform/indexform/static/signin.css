@@ -1,0 +1,185 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+  }
+  .container{
+      display: flex;
+      justify-content: center;
+      margin-bottom: 8vh;
+  }
+  p{
+      text-align: center;
+      margin: 0.5rem 0 1rem 0;
+      font-size: 12px;
+  }
+  .fa-brands, .fab {
+      font-size: 27px;
+      color: #588CE0;
+  }
+  .social-share a{
+      text-decoration: none;
+      color: #CE9461;
+  }
+  .fa-brands{
+      width: 40px;
+      padding: 0.3rem;
+      height: 40px;
+      border-radius: 50%;
+  }
+  .fa-google:hover, .fa-facebook-f:hover{
+      background-color: #5898FC;
+      color: #ffff;
+  }
+  form{
+      background-color: #fff;
+      height: auto;
+      color: #000;
+      padding: 3rem;
+      margin-top: 2rem;
+      border-radius: 20px;
+  }
+  .input{
+      position: relative;
+  }
+  .label{
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(20px, 20px);
+      transform-origin: left;
+      transition: transform .25s;
+  }
+  .form-input{
+      transition: all .5s;
+  }
+  #email, #password{
+      padding: 10px;
+      border: 1px solid #d3d3d3;
+      border-radius: 4px;
+      font: inherit;
+      color: #000;
+      background-color: transparent;
+      margin: 15px;
+  }
+  .input:focus-within .label, .form-input:not(:placeholder-shown) + .label{
+      transform: translate(0, -12px) scale(0.8);
+      color: #588CE0;
+  }
+  .input:focus-within #email, .input:focus-within #password{
+      outline-color: #588CE0;
+  }
+  .form-input::placeholder{
+      color: transparent;
+  }
+  #submit_button {
+      background-color: #588CE0;
+      width: 100px;
+      border: 1px solid #588CE0;
+      border-radius: 25px;
+      height: 30px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      color: #FCFFE7;
+      text-transform: uppercase;
+  }
+  h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight:800;
+    letter-spacing: 2px;
+    font-size:48px;
+    text-transform: uppercase;
+  }
+  a{
+      text-decoration: none;
+      color: #588CE0;
+  }
+  .header {
+    position:relative;
+    text-align:center;
+    background: linear-gradient(60deg, rgba(88, 152, 252, 100) 0%, rgba(247, 199, 99, 100) 100%);
+    color:white;
+  }
+  .logo {
+    width:50px;
+    fill:white;
+    padding-right:15px;
+    display:inline-block;
+    vertical-align: middle;
+  }
+  
+  .inner-header {
+    height:65vh;
+    width:100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .flex { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .waves {
+    position:relative;
+    width: 100%;
+    height:15vh;
+    margin-bottom:-7px; 
+    min-height:100px;
+    max-height:150px;
+  }
+  
+  .content {
+    position:relative;
+    height:20vh;
+    text-align:center;
+    background-color: white;
+  }
+  
+  
+  .parallax > use {
+    animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+  }
+  .parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+  }
+  .parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+  }
+  .parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+  }
+  .parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+  }
+  @keyframes move-forever {
+    0% {
+     transform: translate3d(-90px,0,0);
+    }
+    100% { 
+      transform: translate3d(85px,0,0);
+    }
+  }
+  /*Shrinking for mobile*/
+  @media (max-width: 768px) {
+    .waves {
+      height:40px;
+      min-height:40px;
+    }
+    .content {
+      height:30vh;
+    }
+    h1 {
+      font-size:24px;
+    }
+  }
+  
+  
